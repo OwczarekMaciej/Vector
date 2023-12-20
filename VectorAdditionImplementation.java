@@ -64,7 +64,7 @@ public class VectorAdditionImplementation {
     public static void writeResultToFile(List<Integer> finalVector, String fileName) throws IOException {
         FileWriter writer = new FileWriter(fileName);
         for (Integer value : finalVector) {
-            writer.write(value + ",");
+            writer.write(value + " ");
         }
         System.out.println("Vector saved to " + fileName + " file");
         writer.close();
