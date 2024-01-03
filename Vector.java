@@ -16,21 +16,4 @@ public class Vector {
     public int getLength() {
         return this.vectorValues.size();
     }
-
-    @Override
-    public String toString() {
-        Iterator<Integer> myIterator = vectorValues.iterator();
-        String result = "";
-        result += "[";
-        while (myIterator.hasNext()) {
-            result += String.valueOf(myIterator.next());
-            if (myIterator.hasNext()) {
-                result += ", ";
-            }
-        }
-
-        result += "]";
-
-        return result;
-    }
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class VectorUserInput {
 
     public List<Vector> getVectorFromUser() {
-        List<Vector> correctVector = new ArrayList<>();
+        List<Vector> correctVectors = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Enter values of vector (separated by comma): ");
@@ -14,14 +14,13 @@ public class VectorUserInput {
             if (!userInput.isEmpty()) {
                 String[] values = userInput.split(",");
                 Vector vector = checkVectorValues(values);
-                correctVector.add(vector);
+                correctVectors.add(vector);
             } else {
                 break;
             }
         }
-        return correctVector;
+        return correctVectors;
     }
-
 
     private Vector checkVectorValues(String[] stringUserVector) {
         List<Integer> correctValues = new ArrayList<>();
